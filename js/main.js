@@ -9,7 +9,7 @@
   Infine stampa separatamente i 3 array.
  */
 
-  const car = [
+  const cars = [
     [
       {
       marca: 'auto1',
@@ -70,4 +70,9 @@
 
   ]
 
-  car.forEach((array1) => console.log(array1))
+  const benzinaAuto = cars.filter(car => car.alimentazione === benzina)
+  console.log(benzinaAuto);
+  const dieselAuto =  cars.filter(car => car.alimentazione === diesel)
+  console.log(dieselAuto);
+  const other = cars.filter(car => car.alimentazione !== benzina &&  car.alimentazione !== diesel)
+  console.log(other);
